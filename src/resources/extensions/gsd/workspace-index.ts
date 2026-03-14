@@ -1,17 +1,17 @@
 import { join } from "node:path";
 
-import { loadFile, parsePlan, parseRoadmap } from "./files.ts";
+import { loadFile, parsePlan, parseRoadmap } from "./files.js";
 import {
   resolveMilestoneFile,
   resolveSliceFile,
   resolveSlicePath,
   resolveTaskFile,
   resolveTasksDir,
-} from "./paths.ts";
-import { deriveState } from "./state.ts";
+} from "./paths.js";
+import { deriveState } from "./state.js";
 import { milestoneIdSort, findMilestoneIds } from "./guided-flow.js";
-import { type ValidationIssue, validateCompleteBoundary, validatePlanBoundary } from "./observability-validator.ts";
-import { getSliceBranchName, detectWorktreeName } from "./worktree.ts";
+import { type ValidationIssue, validateCompleteBoundary, validatePlanBoundary } from "./observability-validator.js";
+import { getSliceBranchName, detectWorktreeName } from "./worktree.js";
 
 export interface WorkspaceTaskTarget {
   id: string;
