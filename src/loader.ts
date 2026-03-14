@@ -20,18 +20,17 @@ process.title = 'gsd'
 
 // Print branded banner on first launch (before ~/.gsd/ exists)
 if (!existsSync(appRoot)) {
-  const cyan  = '\x1b[36m'
   const green = '\x1b[32m'
   const dim   = '\x1b[2m'
   const reset = '\x1b[0m'
-  const colorCyan = (s: string) => `${cyan}${s}${reset}`
+  const colorGreen = (s: string) => `${green}${s}${reset}`
   let version = ''
   try {
     const pkgJson = JSON.parse(readFileSync(resolve(dirname(fileURLToPath(import.meta.url)), '..', 'package.json'), 'utf-8'))
     version = pkgJson.version ?? ''
   } catch { /* ignore */ }
   process.stderr.write(
-    renderLogo(colorCyan) +
+    renderLogo(colorGreen) +
     '\n' +
     `  Get Shit Done ${dim}v${version}${reset}\n` +
     `  ${green}Welcome.${reset} Setting up your environment...\n\n`

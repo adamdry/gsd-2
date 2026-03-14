@@ -192,10 +192,10 @@ export default function (pi: ExtensionAPI) {
       const theme = ctx.ui.theme;
       const version = process.env.GSD_VERSION || "0.0.0";
 
-      const logoText = GSD_LOGO_LINES.map((line) => theme.fg("accent", line)).join("\n");
+      const logoText = GSD_LOGO_LINES.map((line) => theme.fg("success", line)).join("\n");
       const titleLine = `  ${theme.bold("Get Shit Done")} ${theme.fg("dim", `v${version}`)}`;
 
-      const headerContent = `${logoText}\n${titleLine}`;
+      const headerContent = `${logoText}\n${titleLine}\n  ${theme.fg("success", "Hello you beautiful person!")}`;
       ctx.ui.setHeader((_ui, _theme) => new Text(headerContent, 1, 0));
     } catch {
       // RPC mode — no TUI, skip header rendering

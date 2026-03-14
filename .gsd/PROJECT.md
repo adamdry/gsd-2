@@ -12,6 +12,7 @@ Structured, agent-executable project management with milestone/slice/task decomp
 
 - M001-us7ooo delivered collision-resistant unique milestone IDs with an opt-in preference toggle and regex hardening across 12+ code sites.
 - M002-fhm3kr swapped the unreleased unique ID format from `M-{rand6}-{seq}` to `M{seq}-{rand6}` (e.g. `M001-abc123`). Clean replacement — all production code, tests, and docs updated. 206 assertions pass across 3 test files. Zero old-format traces remain.
+- M003-alcfdr added "Hello you beautiful person!" welcome message to the TUI session header, styled green via `theme.fg("success", ...)`. Single-line change in `session_start` hook.
 
 ## Architecture / Key Patterns
 
@@ -23,6 +24,7 @@ Structured, agent-executable project management with milestone/slice/task decomp
 - Tests use custom assertion runners (not vitest `describe`/`it`), run via `npx tsx`
 - Regex-hardening test uses vitest wrapper, run via `npx vitest run`
 - Logo rendering: `src/logo.ts` exports raw lines and `renderLogo()`, called from `src/loader.ts`, `src/onboarding.ts`, and `src/resources/extensions/gsd/index.ts`
+- Session startup header: `session_start` hook in `src/resources/extensions/gsd/index.ts` renders logo + version in the TUI header
 
 ## Capability Contract
 
@@ -32,3 +34,4 @@ See `.gsd/REQUIREMENTS.md` for the explicit capability contract, requirement sta
 
 - [x] M001-us7ooo: Unique Milestone IDs — collision-resistant ID generation with opt-in preference and regex hardening
 - [x] M002-fhm3kr: Unique Milestone ID Format Swap — changed unreleased format from `M-{rand6}-{seq}` to `M{seq}-{rand6}`
+- [x] M003-alcfdr: Welcome Message — "Hello you beautiful person!" greeting in TUI session header, styled green

@@ -178,7 +178,7 @@ export async function runOnboarding(authStorage: AuthStorage): Promise<void> {
   }
 
   // ── Intro ─────────────────────────────────────────────────────────────────
-  process.stderr.write(renderLogo(pc.cyan))
+  process.stderr.write(renderLogo(pc.green))
   p.intro(pc.bold('Welcome to GSD — let\'s get you set up'))
 
   // ── LLM Provider Selection ────────────────────────────────────────────────
