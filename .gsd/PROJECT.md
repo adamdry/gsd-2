@@ -34,4 +34,4 @@ See `.gsd/REQUIREMENTS.md` for the explicit capability contract, requirement sta
 
 - [x] M001-us7ooo: Unique Milestone IDs — collision-resistant ID generation with opt-in preference and regex hardening
 - [x] M002-fhm3kr: Unique Milestone ID Format Swap — changed unreleased format from `M-{rand6}-{seq}` to `M{seq}-{rand6}`
-- [x] M003-alcfdr: Welcome Message — display "Hello you beautiful person!" on GSD session start
+- [x] M003-alcfdr: Welcome Message — "Hello you beautiful person!" greeting in TUI session header, styled green
