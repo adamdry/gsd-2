@@ -10,8 +10,8 @@ Structured, agent-executable project management with milestone/slice/task decomp
 
 ## Current State
 
-- M001 delivered collision-resistant unique milestone IDs with an opt-in preference toggle and regex hardening across 12+ code sites.
-- M002 swapped the unreleased unique ID format from `M-{rand6}-{seq}` to `M{seq}-{rand6}` (e.g. `M001-abc123`). Clean replacement — all production code, tests, and docs updated. 206 assertions pass across 3 test files. Zero old-format traces remain.
+- M001-us7ooo delivered collision-resistant unique milestone IDs with an opt-in preference toggle and regex hardening across 12+ code sites.
+- M002-fhm3kr swapped the unreleased unique ID format from `M-{rand6}-{seq}` to `M{seq}-{rand6}` (e.g. `M001-abc123`). Clean replacement — all production code, tests, and docs updated. 206 assertions pass across 3 test files. Zero old-format traces remain.
 
 ## Architecture / Key Patterns
 
@@ -30,5 +30,5 @@ See `.gsd/REQUIREMENTS.md` for the explicit capability contract, requirement sta
 
 ## Milestone Sequence
 
-- [x] M001: Unique Milestone IDs — collision-resistant ID generation with opt-in preference and regex hardening
-- [x] M002: Unique Milestone ID Format Swap — changed unreleased format from `M-{rand6}-{seq}` to `M{seq}-{rand6}`
+- [x] M001-us7ooo: Unique Milestone IDs — collision-resistant ID generation with opt-in preference and regex hardening
+- [x] M002-fhm3kr: Unique Milestone ID Format Swap — changed unreleased format from `M-{rand6}-{seq}` to `M{seq}-{rand6}`
