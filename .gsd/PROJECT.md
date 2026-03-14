@@ -23,6 +23,7 @@ Structured, agent-executable project management with milestone/slice/task decomp
 - Tests use custom assertion runners (not vitest `describe`/`it`), run via `npx tsx`
 - Regex-hardening test uses vitest wrapper, run via `npx vitest run`
 - Logo rendering: `src/logo.ts` exports raw lines and `renderLogo()`, called from `src/loader.ts`, `src/onboarding.ts`, and `src/resources/extensions/gsd/index.ts`
+- Session startup header: `session_start` hook in `src/resources/extensions/gsd/index.ts` renders logo + version in the TUI header
 
 ## Capability Contract
 
@@ -32,3 +33,4 @@ See `.gsd/REQUIREMENTS.md` for the explicit capability contract, requirement sta
 
 - [x] M001-us7ooo: Unique Milestone IDs — collision-resistant ID generation with opt-in preference and regex hardening
 - [x] M002-fhm3kr: Unique Milestone ID Format Swap — changed unreleased format from `M-{rand6}-{seq}` to `M{seq}-{rand6}`
+- [ ] M003-alcfdr: Welcome Message — display "Hello you beautiful person!" on GSD session start
