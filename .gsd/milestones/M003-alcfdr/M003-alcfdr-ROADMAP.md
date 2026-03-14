@@ -24,7 +24,7 @@
 
 ## Slices
 
-- [ ] **S01: Welcome message in session header** `risk:low` `depends:[]`
+- [x] **S01: Welcome message in session header** `risk:low` `depends:[]`
   > After this: GSD greets the user with "Hello you beautiful person!" on every session start.
 
 ## Boundary Map
