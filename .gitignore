@@ -1,6 +1,23 @@
 
-# ── GSD (user project artifacts — never commit) ──
-.gsd/
+# ── GSD: Runtime / Ephemeral (per-developer, per-session) ──────────────────
+# Crash detection sentinel — PID lock, written per auto-mode session
+.gsd/auto.lock
+# Auto-mode dispatch tracker — prevents re-running completed units
+.gsd/completed-units.json
+# Derived state cache — regenerated from plan/roadmap files on disk
+.gsd/STATE.md
+# Per-developer token/cost accumulator
+.gsd/metrics.json
+# Raw JSONL session dumps — crash recovery forensics, auto-pruned
+.gsd/activity/
+# Unit execution records — dispatch phase, timeouts, recovery tracking
+.gsd/runtime/
+# Git worktree working copies
+.gsd/worktrees/
+# Session-specific interrupted-work markers
+.gsd/milestones/**/continue.md
+.gsd/milestones/**/*-CONTINUE.md
+
 .claude/
 *.tgz
 .DS_Store
@@ -45,16 +62,3 @@ AGENTS.md
 TODOS.md
 .planning/
 
-# ── GSD baseline (auto-generated) ──
-.gsd/
-
-# ── GSD baseline (auto-generated) ──
-.gsd/activity/
-.gsd/runtime/
-.gsd/worktrees/
-.gsd/auto.lock
-.gsd/metrics.json
-.gsd/STATE.md
-
-# ── GSD baseline (auto-generated) ──
-.gsd/completed-units.json
